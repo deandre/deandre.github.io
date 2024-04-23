@@ -112,6 +112,14 @@
                 height: 15px;
             }
         </style>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="js/videopopup.js"></script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="css/videopopup.css"
+            media="screen"
+        />
     </head>
 
     <body>
@@ -208,9 +216,7 @@
                         </li>
                         <li>
                             <strong>Incident Management:</strong> Experience in
-                            <a
-                                href="https://www.youtube.com/watch?v=QmIAr0a5NEA"
-                                target="_blank"
+                            <a href="javascript:void(0)" id="video1"
                                 >managing and resolving technical incidents</a
                             >, with a focus on minimizing impact on customer
                             experience.
@@ -506,8 +512,6 @@
             </dl>
 
             <div id="contact-info" class="vcard">
-                <!-- Microformats! -->
-
                 <p>
                     See also:
                     <a href="https://linkedin.com/in/deandre" target="_blank"
@@ -518,5 +522,26 @@
 
             <div class="clear"></div>
         </div>
+        <div id="vidBox">
+            <div id="videCont">
+                <video autoplay id="v1" loop controls>
+                    <source
+                        src="https://assets.deandre.support/gitlab_cmoc_role_walkthrough.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $("#vidBox").VideoPopUp({
+                    backgroundColor: "#17212a",
+                    opener: "video1",
+                    maxweight: "640",
+                    idvideo: "v1",
+                    pausevideo: true,
+                });
+            });
+        </script>
     </body>
 </html>
